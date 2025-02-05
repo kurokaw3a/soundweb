@@ -1,7 +1,9 @@
 {
   "files": [],
+  "include": ["eslint.config.mjs", "src/**/*"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
+    // other configurations
   ]
 }

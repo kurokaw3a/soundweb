@@ -1,0 +1,72 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/vars.scss';
+
+.layout{
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.nav {
+    width: 280px;
+    height: 100%;
+    @include flex-column;
+    gap: 20px;
+    padding: 25px 0px 25px 20px;
+    border-right: 1px solid #1C1C1C;
+    user-select: none;
+}
+
+.line{
+    @include hr;
+    border-color: $darkgray;
+}
+
+.app{
+    @include flex-baseline;
+    gap: 10px;
+}
+
+.app_name {
+    @include h1;
+    color: $pink;
+    font-weight: 500;
+}
+
+.menu {
+    @include flex-column;
+    gap: 36px;
+    div{
+        @include flex-column;
+        gap: 15px;
+    }   
+}
+
+
+.link {
+    @include h1;
+    font-weight: 500;
+    font-size: 22px;
+    color: $whitesmoke;
+
+    width: 200px;
+    @include flex-center;
+    border-radius: 5px;
+    gap: 10px;
+    cursor: pointer;
+    transition:500ms ease;
+    padding: 3px;
+
+    &:hover,
+    &:active {
+      background-color: rgba(58, 58, 58, 0.425);
+      transition: color 300ms ease;
+      color: $pink;
+   }
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
